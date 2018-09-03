@@ -1,0 +1,47 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<input style="color: white;" type="text" />
+
+<table style="width: 15%; height: 100px; margin-top: 2%;" border="1">
+	<tr>
+		<td style="background-color: blue;" color="blue"></td>
+		<td style="background-color: orange;" color="orange"></td>
+		<td style="background-color: green;" color="green"></td>
+		<td style="background-color: purple;" color="purple"></td>
+	</tr>
+	<tr>
+		<td style="background-color: #EC7063;" color="#EC7063"></td>
+		<td style="background-color: #A3E4D7;" color="#A3E4D7"></td>
+		<td style="background-color: #F0B27A;" color="#F0B27A"></td>
+		<td style="background-color: #58D68D;" color="#58D68D"></td>
+	</tr>
+	<tr>
+		<td style="background-color: #5D6D7E;" color="#5D6D7E"></td>
+		<td style="background-color: #BDC3C7;" color="#BDC3C7"></td>
+		<td style="background-color: #E59866;" color="#E59866"></td>
+		<td style="background-color: #76D7C4;" color="#76D7C4"></td>
+	</tr>
+	<tr>
+		<td style="background-color: #2E86C1;" color="#2E86C1"></td>
+		<td style="background-color: #F1C40F;" color="#F1C40F"></td>
+		<td style="background-color: #73C6B6;" color="#73C6B6"></td>
+		<td style="background-color: #922B21;" color="#922B21"></td>
+	</tr>
+</table>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("td").click(function(){
+            var color = $(this).attr("color");
+
+			$("input").css("background-color",color);
+
+		});
+	});
+</script>
+</body>
+</html>
