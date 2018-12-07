@@ -1,0 +1,39 @@
+/*--------- div toggle ----------*/
+
+    $(document).ready(function(){
+    	$(".one").click(function(){
+
+	var tt = $(this).parents(".divmain");
+        $(tt).find(".two,.two1").slideToggle("slow");
+
+    	});
+    });
+
+/*--------- click to add class while loading into another page ----------*/
+
+$(function() {
+	console.log(location.pathname.split("/")[2] );
+  $('li a[href^="' + location.pathname.split("/")[2] + '"]').addClass('active');
+});
+
+/*--------- dropdown ul li click to toggle ----------*/
+
+<li class="one" dat="ones">
+ <a href="#"><i class="fa fa-list-alt fa-fw"></i>&nbsp; Nevon Express <span class="caret"></span></a>
+</li>
+
+<ul class="ones nav">
+<li>
+<a href="MyEarnings.aspx"><i class="fa fa-money"></i>&nbsp; My Earnings </span></a>
+</li>
+<li>
+<a href="OrderReport.aspx"><i class="fa fa-sticky-note"></i>&nbsp; Order Report </span></a>
+</li>
+ </ul>
+
+$(document).ready(function(){
+     $(".one").click(function(){
+     var att = $(this).attr("dat");
+     $("."+att).slideToggle("2000");
+      }); 
+});
