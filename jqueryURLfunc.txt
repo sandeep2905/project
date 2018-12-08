@@ -1,0 +1,24 @@
+/*------- click to add class to the <a> tag using url(path of page) ------- */
+
+$(function() {
+          
+            var url = location.pathname.split("/")[1];
+            if (url == 'MyEarnings.aspx' || url == 'OrderReport.aspx') {
+
+                $('.ones').css('display', 'block');
+                $('.ones').find('li a[href^="' + location.pathname.split("/")[1] + '"]').addClass('active');
+
+            }
+            else if (url == 'HardwareList.aspx' || url == 'mechanical.aspx' || url == 'software.aspx') {
+
+                $('.twos,.threes').css('display', 'block');
+                $('.twos,.threes').find('li a[href^="' + location.pathname.split("/")[1] + '"]').addClass('active');
+            }
+            else if (url == 'placeorder.aspx' || url == 'viewleads.aspx') {
+
+                $('.twos').css('display', 'block');
+                $('.twos').find('li a[href^="' + location.pathname.split("/")[1] + '"]').addClass('active');
+            }
+    
+         
+});
