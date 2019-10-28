@@ -1,0 +1,24 @@
+
+/* image to base64 */
+
+if (User_profilepic.HasFile)
+
+{
+System.IO.Stream fs = User_profilepic.PostedFile.InputStream;
+System.IO.BinaryReader br = new System.IO.BinaryReader(fs);
+Byte[] bytes = br.ReadBytes((Int32)fs.Length);
+base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
+}
+
+
+/* image to base64 */
+
+
+
+
+/* base64 to image */
+
+string img = String.Format(@"data:image/jpeg;base64,{0}", ds.Tables[0].Rows[0][8].ToString());
+                UserImage.ImageUrl = img;
+
+/* base64 to image */
